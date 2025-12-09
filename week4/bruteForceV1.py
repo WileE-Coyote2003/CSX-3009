@@ -1,6 +1,6 @@
 #Name : Thwin Htoo Aung
 #id : 6612109
-#Section: 543
+#Section: 541
 import sys
 sys.setrecursionlimit(10000)
 
@@ -9,8 +9,11 @@ w = list(map(int, input().split()))
 v = list(map(int, input().split()))
 
 x = [0]*N # [0,0,0,0,0]
+call_count = 0
 
 def comb(i):
+    global call_count
+    call_count += 1
     if i == N:
         sw = sv = 0
         for j in range(N):
@@ -36,3 +39,4 @@ def comb(i):
 # run Version 1
 ans = comb(0)
 print(ans)
+print("Recursive call_count:",call_count)

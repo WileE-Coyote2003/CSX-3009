@@ -21,9 +21,9 @@ def maxVal(i,C):
     if key in memo:
         return memo[key]
     
-    if i == N:
+    if i == N: # When i == N, all items have been considered.
         memo[key] = 0
-        return 0 
+        return 0 # so return zero
     else:
         skip = maxVal(i+1,C)
         if w[i] <= C:

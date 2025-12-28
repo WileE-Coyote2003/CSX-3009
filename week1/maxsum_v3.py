@@ -7,7 +7,7 @@ import time
 start = time.process_time()
 
 def MaxSum(x):
-    max_sum = current_sum = x[0]
+    max_sum = current_sum = x[0] # global varaiable with first value of array
     for num in x[1:]:
         current_sum = max(num, current_sum + num)
         max_sum = max(max_sum, current_sum)

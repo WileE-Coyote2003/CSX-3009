@@ -14,7 +14,6 @@ def combination(i):
     
     x[i] = 0
     first_rec_call = combination(i + 1)
-
     x[i] = 1
     second_rec_call = combination(i + 1)
     return first_rec_call + second_rec_call

@@ -22,10 +22,12 @@ def Sum(acc, i, j):
 def MaxSum(x):
     n = len(x)
     acc = accumulate_list(x)
+    print(acc)
     max_sum = -float('inf')
     for i in range(n):
         for j in range(i, n):
             s = Sum(acc, i, j)
+            print(s)
             if s > max_sum:
                 max_sum = s
     return max_sum

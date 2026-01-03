@@ -8,7 +8,7 @@ prices = list(map(int, input().split()))
 
 start = time.process_time()
 
-def MaxRevenue(l,prices,memo=None):
+def MaxRevenue(l,prices):
     global call_count
     call_count += 1
     if l == 0:

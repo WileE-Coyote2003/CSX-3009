@@ -9,7 +9,7 @@ FLAT = 0
 UPPER2 = 1
 LOWER2 = 2
 
-L = int(input())
+L = int(input()) #column
 
 def nWays(d, s):
     if d == L:
@@ -17,6 +17,7 @@ def nWays(d, s):
             return 1
         else:
             return 0
+        
     counter = 0
 
     if s == FLAT:

@@ -83,9 +83,16 @@ def DFS(s, atMost):
 def IDAstar(s):
     global found
 
-    # Complete this function
-    
+    found = False
+    atMost = s.g + s.h   # initial f-bound
 
+    while True:
+        step = DFS(s, atMost)
+        if found:
+            return step          # solved, return optimal move count
+        if step >= 10000000000:  # no progress / unsolvable safeguard
+            return -1
+        atMost = step            # increase bound to next minimum f that was pruned
           
 count = 0
 s = state(p)
